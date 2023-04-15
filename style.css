@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Avant";
+    src: url("https://assets.codepen.io/383755/avant-garde.woff2") format("woff2");
+}
+
+body, html {
+    height: 100%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
+    background: #e8e6de;
+    --elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --x:0px;
+    --y:0px;
+    --t: rgba(255, 255, 255, 0.001);
+    --lightest: #f897d5;
+    --light:#f567c2;
+    --dark: #755ad0;
+    --darkest: #1a2a6c;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.container {
+    position: relative;
+    width: auto;
+    overflow: hidden;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    mix-blend-mode: darken;
+    z-index: 1;
+    margin: 0 -1rem;
+    &:last-of-type {
+        justify-content: start;
+    }
+    &:hover {
+        z-index: 2;
+    }
+    &:nth-of-type(2) {
+        --lightest: #ffd986;
+        --light: #fdbb2d;
+        --dark: #b21f1f;
+        --darkest: #1a2a6c;
+    }
+    .inner {
+        display: inline-block;
+        position: relative;
+        pointer-events: all;
+        z-index: 2;
+        cursor: pointer;
+        box-shadow: 0 0 0 555vmin #e8e6de;
+    }
+    .inner:hover {
+        &:active {
+            &:before {
+                background-size: 35% 60%, 100% 100%, 100%;
+            }
+        }
+        &:before {
+            filter: blur(2px) brightness(1);
+            background-size: 0px 0px, 100% 100%, 100%;
+            transition: transform 0.5s var(--elastic), background-size 0.25s ease-in-out;
+        }
+    }
+
+}
