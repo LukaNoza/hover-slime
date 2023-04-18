@@ -208,3 +208,8 @@ body {
         }
     }
 }
+
+.container{
+    margin-left: 10px;
+    background-color: #1a2a6c;
+}
