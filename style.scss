@@ -57,7 +57,7 @@ body {
         pointer-events: all;
         z-index: 2;
         cursor: pointer;
-        box-shadow: 0 0 0 555vmin #e8e6de;
+        box-shadow: 0 0 0 500vmin #e8e6de;
     }
     .inner:hover {
         &:active {
@@ -98,7 +98,7 @@ body {
     opacity: 1;
     mix-blend-mode: lighten;
     z-index: 2;
-    transition: transform 0,5s var(--elastic), background-size 0.25s ease-in-out,
+    transition: transform 0.5s var(--elastic), background-size 0.25s ease-in-out,
     filter 0.5s ease-in-out;
      transform: translate(calc(var(--x) - 50%), calc(var(--y) - 50%));
      z-index: 2;
@@ -154,7 +154,7 @@ body {
         }
         &:active:hover ~ .blob {
             &:before {
-                box-shadow: 0 0 0 0rem #fff, 0 -5rem 0 1,75rem #fff, 
+                box-shadow: 0 0 0 0rem #fff, 0 -5rem 0 1.75rem #fff, 
                 0 5rem 0 1.75rem #fff;
                 transition: transform 500ms var(--elastic), 
                 box-shadow 500ms var(--elastic);
@@ -182,13 +182,13 @@ body {
             background: #000;
         }
         &:before {
-            width: 15px;
+            width: 15%;
             height: auto;
             z-index: 2;
             transition: transform 750ms var(--elastic),
             box-shadow 500ms  var(--elastic);
             aspect-ratio: 1/1;
-            box-shadow: 0 0 0 0.75rem #fff, 0 -8rem 0 -2rem #fff, 0 8rem 0m -2rem #fff;
+            box-shadow: 0 0 0 0.75rem #fff, 0 -8rem 0 -2rem #fff, 0 8rem 0 -2rem #fff;
             left: 0;
             top: 0;
             border-radius: 100%;
